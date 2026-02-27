@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f2f2f2;
+}
+
+.navbar {
+    background: #222;
+    color: white;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.menu a {
+    color: #aaa;
+    text-decoration: none;
+}
+
+.search {
+    margin-left: auto;
+    display: flex;
+    gap: 5px;
+}
+
+.search input {
+    padding: 5px;
+    width: 200px;
+}
+
+.search button {
+    padding: 6px 10px;
+    background: #333;
+    color: white;
+    border: 1px solid white;
+}
+
+
+.container {
+    width: 90%;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+}
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add {
+    background: #0066ff;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th, td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background: #f2f2f2;
+}
+
+
+.edit {
+    background: orange;
+    color: black;
+    border: none;
+    padding: 5px 10px;
+}
+
+.delete {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+}
+
+
+
+.form-container {
+    width: 600px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.form-header {
+    background: #0066ff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-body {
+    padding: 15px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row div {
+    width: 48%;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 6px;
+    margin-top: 5px;
+}
+
+.form-footer {
+    text-align: right;
+    padding: 10px;
+}
+
+.save {
+    background: green;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+}
+
+.cancel {
+    padding: 6px 12px;
+}
+.blue-border {
+    border: 2px solid #0066ff;
+}

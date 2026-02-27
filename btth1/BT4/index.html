@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BT4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form action="">
+        <div class="container">
+            <fieldset>
+                <legend>Basic Info</legend>
+
+                <label>Employee ID</label>
+                <span>9</span><br>
+
+                <label>Last Name</label>
+                <span>Dodswprth</span><br>
+
+                <label>First Name</label>
+                <input type="text" value="Anne"><br>
+
+                <label>Gender</label>
+                <div class="inline">
+                <input class="small" type="radio" name="gender">Male 
+                <input class="small" type="radio" name="gender">Female
+                <input class="small" type="radio" name="gender">XXX
+                <input class="small" type="radio" name="gender">ZZZ<br>
+                </div>
+
+                <label>Title</label>
+                <input type="text" value="Sales Representative"><br>
+
+                <label>Suffix</label>
+                <input type="text" value="Ms."><br>
+
+                <label>BirthDate</label>
+                <input type="text" value="1969-07-02 00:00:00"><span class="icon">(?)</span><br>
+
+                <label>HireDate</label>
+                <input type="text" value="1994-11-15 00:00:00"><br>
+
+                <label>SSN # (if applicabe)</label>
+                <input type="text" value=""><br>
+
+                <label>Reports To</label>
+                <select>
+                    <option>Buchanan</option>
+                </select>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Contact Info</legend>
+                <label>Email</label>
+                <input type="email" placeholder="name@example.com"><br>
+
+                <label>Address</label>
+                <input type="text" value="7 Houndstooth Rd."><br>
+
+                <label>City</label>
+                <input type="text" value="London"><br>
+
+                <label>Region</label>
+                <input type="text" value=""><br>
+
+                <label>Posral Code</label>
+                <input type="text" value="WG2 7LT"><br>
+
+                <label>Country</label>
+                <select>
+                    <option>Russian Federation</option>
+                </select><br>
+
+                <label>US Home Phone</label>
+                <input type="text" value="(234)234-2342"><br>
+
+                <label>Photo</label>
+                <input type="text" value="EmpID9.bmp"><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Optional Info</legend>
+                <label>Notes</label>
+                <textarea rows="6">Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German.ZZZ</textarea><br>
+
+                <label>Preferred Shift</label>
+                <div class="inline">
+                    <input type="radio" name="s"> Regular
+                    <input type="radio" name="s" checked> Gravy Yard
+                </div>
+                
+                <label>Active?</label>
+                <input class="small" type="checkbox"><br>
+
+                <label>Are you human?</label><p>TIDAWO</p>
+                <input type="text" value=""><br>
+
+            </fieldset>
+            <div class="buttons"><button>Submit</button><button>Cancel</button></div>
+        </div>
+    </form>
+</body>
+</html>
