@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 2 - Landing Page</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Arial', sans-serif; }
+
+        /* HEADER */
+        header {
+            background-color: #333;
+            color: #FFD700; /* Màu vàng */
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo { font-weight: bold; font-style: italic; font-size: 1.2em; }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9em;
+        }
+
+        /* MAIN SECTION - HERO */
+        .hero {
+            /* Ảnh nền biển xanh */
+            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.3);
+        }
+
+        .hero-content {
+            position: relative; /* Để nổi lên trên lớp phủ */
+            z-index: 1;
+        }
+
+        .hero h1 { font-size: 2.5em; margin-bottom: 10px; }
+        .hero p { margin-bottom: 20px; font-size: 0.9em; letter-spacing: 2px; }
+        
+        .btn-discover {
+            background-color: #FFD700;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* HIGHLIGHTS SECTION */
+        .highlights {
+            background-color: #f0f8ff; /* Màu nền xanh rất nhạt */
+            padding: 40px 50px;
+            text-align: center;
+        }
+        
+        .highlights h2 { margin-bottom: 30px; font-size: 1.2em; color: #333; }
+
+        .cards-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        .card p {
+            font-size: 0.8em;
+            margin-top: 10px;
+            color: #555;
+            text-transform: uppercase;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .social-icons {
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">TRAVEL GOALS</div>
+        <nav>
+            <a href="#">Destination</a>
+            <a href="#">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>JOE'S TRAVEL PAGE</h1>
+                <p>LET'S EXPLORE THE WORLD TOGETHER</p>
+                <button class="btn-discover">Discover places</button>
+            </div>
+        </section>
+
+        <section class="highlights">
+            <h2>HIGHLIGHTS</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1534008897965-345042d7616f?auto=format&fit=crop&w=400&q=80" alt="Miami">
+                    <p>Miami USA</p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1566421946006-21a4f1532057?auto=format&fit=crop&w=400&q=80" alt="Munich">
+                    <p>Munich Germany</p>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1583422409516-2895a77efded?auto=format&fit=crop&w=400&q=80" alt="Barcelona">
+                    <p>Barcelona Spain</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+  
+            <span>📷</span> <span>ef</span>
+        </div>
+    </footer>
+
+</body>
+</html>
