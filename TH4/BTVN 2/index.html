@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Multi-step Registration</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; background: #f0f2f5; display: flex; justify-content: center; padding: 40px; }
+        .container { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 450px; }
+        
+        /* Progress Bar */
+        .progress-container { display: flex; justify-content: space-between; margin-bottom: 30px; position: relative; }
+        .progress-container::before { content: ""; background: #ddd; position: absolute; top: 50%; left: 0; transform: translateY(-50%); height: 4px; width: 100%; z-index: 1; }
+        .progress-bar-fill { content: ""; background: #007bff; position: absolute; top: 50%; left: 0; transform: translateY(-50%); height: 4px; width: 0%; z-index: 1; transition: 0.4s; }
+        .step-circle { width: 30px; height: 30px; background: #fff; border: 3px solid #ddd; border-radius: 50%; display: flex; justify-content: center; align-items: center; z-index: 2; font-weight: bold; transition: 0.4s; }
+        .step-circle.active { border-color: #007bff; color: #007bff; }
+
+        /* Form Steps */
+        .step-content { display: none; }
+        .step-content.active { display: block; }
+        
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: 600; }
+        input, select { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+        .error { color: #dc3545; font-size: 12px; margin-top: 5px; display: none; }
+        .form-group.invalid input { border-color: #dc3545; }
+        .form-group.invalid .error { display: block; }
+
+        .btn-group { display: flex; gap: 10px; margin-top: 20px; }
+        button { flex: 1; padding: 12px; border-radius: 6px; border: none; cursor: pointer; font-weight: bold; }
+        .btn-next { background: #007bff; color: white; }
+        .btn-prev { background: #6c757d; color: white; }
+        
+        #summary-data { background: #f8f9fa; padding: 15px; border-radius: 6px; font-size: 14px; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="progress-container">
+        <div class="progress-bar-fill" id="progress-fill"></div>
+        <div class="step-circle active">1</div>
+        <div class="step-circle">2</div>
+        <div class="step-circle">3</div>
+    </div>
+
+    <form id="multiStepForm" novalidate>
+        <div class="step-content active" id="step-1">
+            <h3>Thông tin cá nhân</h3>
+            <div class="form-group">
+                <label>Họ tên</label>
+                <input type="text" id="fullname" required>
+                <span class="error">Vui lòng nhập họ tên (ít nhất 3 ký tự)</span>
+            </div>
+            <div class="form-group">
+                <label>Ngày sinh</label>
+                <input type="date" id="dob" required>
+                <span class="error">Vui lòng chọn ngày sinh</span>
+            </div>
+            <div class="form-group">
+                <label>Giới tính</label>
+                <select id="gender">
+                    <option value="">-- Chọn --</option>
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                </select>
+                <span class="error">Vui lòng chọn giới tính</span>
+            </div>
+        </div>
+
+        <div class="step-content" id="step-2">
+            <h3>Thông tin tài khoản</h3>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="email" required>
+                <span class="error">Email không hợp lệ</span>
+            </div>
+            <div class="form-group">
+                <label>Mật khẩu</label>
+                <input type="password" id="password" required>
+                <span class="error">Mật khẩu tối thiểu 8 ký tự</span>
+            </div>
+            <div class="form-group">
+                <label>Xác nhận mật khẩu</label>
+                <input type="password" id="confirmPassword" required>
+                <span class="error">Mật khẩu xác nhận không khớp</span>
+            </div>
+        </div>
+
+        <div class="step-content" id="step-3">
+            <h3>Xác nhận thông tin</h3>
+            <div id="summary-data">
+                </div>
+        </div>
+
+        <div class="btn-group">
+            <button type="button" class="btn-prev" id="prevBtn" style="display: none;">Quay lại</button>
+            <button type="button" class="btn-next" id="nextBtn">Tiếp theo</button>
+        </div>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

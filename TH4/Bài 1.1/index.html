@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản Lý Điểm Sinh Viên</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
+        th { background-color: #f4f4f4; }
+        .highlight-yellow { background-color: #fff9c4; } /* Tô màu cho điểm < 5 */
+        .summary { margin-top: 15px; font-weight: bold; }
+        .input-group { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <h2>Quản Lý Điểm Sinh Viên</h2>
+    
+    <div class="input-group">
+        <input type="text" id="txtName" placeholder="Họ tên sinh viên">
+        <input type="number" id="txtScore" placeholder="Điểm (0-10)" step="0.1">
+        <button id="btnAdd">Thêm</button>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Họ tên</th>
+                <th>Điểm</th>
+                <th>Xếp loại</th>
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody id="studentTableBody">
+            </tbody>
+    </table>
+
+    <div class="summary" id="summaryArea">
+        Tổng số sinh viên: 0 | Điểm trung bình: 0
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
